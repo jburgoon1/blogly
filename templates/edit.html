@@ -1,0 +1,10 @@
+{%extends base.html%}
+{%block title%} Edit User {%endblock%}
+{%block content%}
+<form action="/user/<int:user_id>/edit" method="POST">
+    <input type="text" name="first" placeholder="{{User.first_name}}">
+    <input type="text" name= "last" placeholder="{{User.last_name}}">
+    <input type="text" name= "img" placeholder="{{User.image_url}}">
+    <button>Submit</button>
+</form>
+{%endblock%}
