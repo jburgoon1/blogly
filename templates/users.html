@@ -1,9 +1,9 @@
-{%extends base.html%}
+{%extends 'base.html'%}
 {%block title%}Home{%endblock%}
 {%block content%}
 {%for user in users%}
 <ul>
-    <li><a href="">{{user}}</a></li>
+    <li><a href="/user/<int:user_id>">{{user}}</a></li>
 </ul>
 {%endfor%}
 <form action="/add_new">

@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block title%} Post Deatils {%endblock%}
+{%block content%}
+<h1>{{user.posts.title}}</h1>
+<p>{{user.posts.content}}</p>
+<h2>By: {{post.user_id.first}} {{post.user_id.last}}</h2>
+
+<form action="/user/<int:user_id>">
+    Cancel
+</form>
+<form action="/user/<int:user_id>/posts/edit">
+    Edit
+</form>
+<form action="/user/<int:user_id>/posts/delete">
+    Delete
+</form>
+{%endblock}
